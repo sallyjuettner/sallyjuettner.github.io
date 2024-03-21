@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Games</title>
+	<meta charset="utf-8">
+	<title>Level Design</title>
 </head>
 <body>
 
@@ -23,40 +23,41 @@
         <div id="flex">
 
             <main>
-                <h1>Games</h1>
+                <h1>Level Design</h1>
 
                 <center>
-                    <h1><a href="https://sallyjuettner.itch.io/artifice">Artifice</a></h1>
-                    <img src="artifice.png" alt="Two lines of text on a dark blue background. The top line is in white and reads 'You're never going to die.' The bottom line is in blue and reads 'I'm never going to die." width="473" height="152">
-                    <p>Artifice is a Twine game made in the space of one week. You play as an artificer named Dr. Ingrid Peren as she navigates a world approaching ruin due to a calamitous thundestorm.</p>
+                    <h1><a href="https://github.com/sallyjuettner/Single-Player-Quake-Map">Hellbreak</a></h1>
+                    <img src="hellbreak.png" alt="A screenchot of a Quake level. The player overlooks a maze in the shape of a pentagram." width="473" height="250">
+                    <p>Hellbreak is a single-player Quake map in which the player breaks out of Hell and fights their way up to purgatory and finally heaven.</p>
 
-                    <h1><a href="https://sallyjuettner.itch.io/the-1904-olympic-marathon">The 1904 Olympic Marathon</a></h1>
-                    <img src="1904OlympicMarathon.png" alt="A picture of a bitsy game with pixel art in green, yellow, and white. It shows a race track, stadium seats, and people gathered around the track. Some of them are lined up near the starting line." width="440" height="438">
-                    <p>The 1904 Olympic Marathon is a lighthearted simulation of the historical race of the same name. You play as Thomas Hicks as he goes through what has been called the most poorly planned marathon in history.</p>
+                    <h1><a href="https://github.com/sallyjuettner/Quake-Deathmatch">Liminal Villa</a></h1>
+                    <img src="liminalVilla.png" alt="A top-down view of a prototype Quake map. The map is symmetrical and colored with purple and yellow for high contrast between the floors and walls, with grid textures." width="473" height="250">
+                    <p>Liminal Villa is a Quake deathmatch map designed for the purpose of familiarizing myself with Trenchbroom and multiplayer game design principles.</p>
                 </center>
+
             </main>
 
         </div>
         <!--<footer id="footer">CC0 Public Domain, 2022</footer>-->
     </div>
-    <!-- THIS IS THE CSS !-->
-    <style>
+        <!-- THIS IS THE CSS !-->
+        <style>
             /* user styles */
 
             /* styles are what change the color and sizes of stuff on your site. */
 
-
+            
 
             /* if you have the URL of a font, you can set it below */
             /* feel free to delete this if it's not your vibe */
 
-            /* this seems like a lot for just one font and I would have to agree
-        but I wanted to include an example of how to include a custom font.
-        If you download a font file you can upload it onto your Neocities
-        and then link it! Many fonts have separate files for each style
-        (bold, italic, etc. T_T) which is why there are so many!
-
-        */
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
 
             @font-face {
                 font-family: Nunito;
@@ -98,32 +99,32 @@
             /* below this line is CSS for the layout */
 
             /* this is a CSS comment
-        to uncomment a line of CSS, remove the * and the /
-        before and after the text */
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
 
 
             /* the "container" is what wraps your entire website */
             /* if you want something (like the header) to be Wider than
-        the other elements, you will need to move that div outside
-        of the container */
+    the other elements, you will need to move that div outside
+    of the container */
             #container {
                 max-width: 900px;
                 /* this is the width of your layout! */
                 /* if you change the above value, scroll to the bottom
-          and change the media query according to the comment! */
+      and change the media query according to the comment! */
                 margin: 0 auto;
                 /* this centers the entire page */
             }
 
-                /* the area below is for all links on your page
-        EXCEPT for the navigation */
-                #container a {
-                    color: #fceaff;
-                    font-weight: bold;
-                    /* if you want to remove the underline
-          you can add a line below here that says:
-          text-decoration:none; */
-                }
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #fceaff;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
 
             #header {
                 width: 100%;
@@ -131,8 +132,8 @@
                 /* header color here! */
                 height: 150px;
                 /* this is only for a background image! */
-                /* if you want to put images IN the header,
-          you can add them directly to the <div id="header"></div> element! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
                 /*background-image: var(--header-image);*/
                 background-size: 100%;
             }
@@ -145,40 +146,40 @@
                 width: 100%;
             }
 
-                #navbar ul {
-                    display: flex;
-                    padding: 0;
-                    margin: 0;
-                    list-style-type: none;
-                    justify-content: space-evenly;
-                }
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
 
-                #navbar li {
-                    padding-top: 10px;
-                }
+            #navbar li {
+                padding-top: 10px;
+            }
 
-                    /* navigation links*/
-                    #navbar li a {
-                        color: #fceaff;
-                        /* navbar text color */
-                        font-weight: 800;
-                        text-decoration: none;
-                        /* this removes the underline */
-                    }
+            /* navigation links*/
+            #navbar li a {
+                color: #fceaff;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
 
-                        /* navigation link when a link is hovered over */
-                        #navbar li a:hover {
-                            color: #a49cba;
-                            text-decoration: underline;
-                        }
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #a49cba;
+                text-decoration: underline;
+            }
 
             #flex {
                 display: flex;
             }
 
             /* this colors BOTH sidebars
-        if you want to style them separately,
-        create styles for #leftSidebar and #rightSidebar */
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
             aside {
                 background-color: #241445;
                 width: 200px;
@@ -189,7 +190,7 @@
 
 
             /* this is the color of the main content area,
-        between the sidebars! */
+    between the sidebars! */
             main {
                 background-color: #2A4D6E;
                 flex: 1;
@@ -198,10 +199,10 @@
             }
 
             /* what's this "order" stuff about??
-        allow me to explain!
-        if you're using both sidebars, the "order" value
-        tells the CSS the order in which to display them.
-        left sidebar is 1, content is 2, and right sidebar is 3! */
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
 
             */ #leftSidebar {
                 order: 1;
@@ -256,12 +257,12 @@
 
             /* BELOW THIS POINT IS MEDIA QUERY */
 
-            /* so you wanna change the width of your page?
-        by default, the container width is 900px.
-        in order to keep things responsive, take your new height,
-        and then subtrack it by 100. use this new number as the
-        "max-width" value below
-        */
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
 
             @media only screen and (max-width: 800px) {
                 #flex {
@@ -273,9 +274,9 @@
                 }
 
                 /* the order of the items is adjusted here for responsiveness!
-          since the sidebars would be too small on a mobile device.
-          feel free to play around with the order!
-          */
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
                 main {
                     order: 1;
                 }
@@ -292,8 +293,8 @@
                     flex-wrap: wrap;
                 }
             }
-    </style>
+        </style>
 
-
+    
 </body>
 </html>
