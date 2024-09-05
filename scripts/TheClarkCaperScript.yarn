@@ -1,0 +1,431 @@
+title: Intro
+---
+You are Miriam Parker, a young woman living in the 1920s. Your childhood friend Frances Clark has invited you to her home to celebrate her brother's return from the Great War.
+You have been living in Paris, but returned at your friend's request. After all, you haven't seen her since her father's death some years ago.
+Prepare yourself for an unforgetable visit!
+<color=blue>Use the arrow keys or WASD to move & Z to interact. Enter selects a dialogue choice.</color>
+===
+
+title: Knock
+---
+<<declare $victim = "Golfer">>
+You knock on the door.
+After a moment, a middle-aged man in a butler's uniform answers the door.
+Bailey: Good day. Ms. Parker, I presume? 
+Miriam: That’s right. I was invited by Ms. Clark. 
+Bailey: Very good, ma’am. Right this way. 
+<<SwitchScene 1>>
+<<jump Parlor>>
+===
+
+title: Parlor
+---
+In the parlor your friend Frances greets you with a bright smile. She looks to have become a proper flapper in your absence, hair styled short and wearning an evening dress that barely reaches her knees.
+Frances: Miriam! Oh darling, I am so glad you were able to come! What has it been, five years? Tell me, how is life in Paris? 
+	-> Miserable
+		Miriam: It doesn’t hold a candle to the States. I’d have come back even had I not received your invitation. 
+		Frances: Oh, a terrible shame, that. But as long as you’re back home now, that’s all that matters. 
+	-> Wonderful 
+		Miriam: Truly the city of lights is the best place in the world to work on one’s craft. 
+		Frances: I’m so glad to hear the writing is going well! You must show me a copy of your manuscript one of these days. 
+Frances: But come, you must say hello to everyone, especially the man of the hour! I trust you remember my brother Vincent, even in uniform. He’s just returned from Europe as well.
+Vincent is a short, stocky man sporting a soldier's uniform and a nonplussed expression.
+Vincent: Good to see you again. 
+	-> Glad you made it 
+		Miriam: Glad you made it home safely, old chap. 
+		Vincent: ... Thanks. 
+	-> Just returned? 
+		Miriam: Just returned? It’s been a few years since the war ended. 
+		Vincent: I travelled around a bit after it all ended. Wanted to see the place as a civilian for a while. 
+		Miriam: I see. 
+Frances: And this lovely lady here is my dear friend, Alma. She’s a jazz singer up in New York and an absolute darling. 
+Alma is a Black woman around Frances's age who smiles politely at you, although she looks deeply uncomfortable to be here.
+Alma: Pleased to meet you. 
+	-> I’ve heard of you 
+		Miriam: I do believe I’ve heard of you. "The voice of an angel" I heard someone say. 
+		Alma: Oh, I’m flattered. They were certainly exaggerating, though. 
+		Frances: They most certainly were not! 
+	-> Nice to see Frances making friends 
+		Miriam: I’m glad to see Frances making friends in my absence. 
+		Alma: Ha, I’m sure I’m no replacement for you. 
+Frances: And last but not least, my old pal Clyde. He’s a professional golfer, if you couldn’t tell from the nine iron he insists on toting around with him. 
+Clyde: It’s my good luck charm, doll, you know that. Good to meet you though, old chap.
+Indeed, Clyde is leaning casually on a golf club. A lackadaisical smile is plastered on his face.
+Clyde: Not everyday I meet a woman of your literary inclination, not to mention with a face to match. 
+Frances: Oh do shut up, Clyde.
+Frances: Let’s not linger with this cad, Miriam dear. Now that you’ve met everyone I do believe dinner ought to be our next point of order. 
+Frances: Come along, everyone! Supper’s on! 
+<<SwitchScene 2>>
+<<jump Dinner>>
+===
+
+title: Dinner
+---
+<<ChangeMusic "Game Manager" 1>>
+Everyone settles down at the dinner table, but you notice Clyde eyeing the butler with distaste.
+Clyde: What's this now, Frances, you let the staff eat with you?
+The butler looks afronted and opens his mouth to speak, but Frances pipes up first.
+Frances: Mr. Bailey's always eaten with us, Clyde, you must know that. He was a dear friend of Father's.
+<<GetClue "The Butler was a close friend of the Hostess's father.">>
+Clyde: Ah. How, eh, provincial.
+Frances: Don't make me regret inviting you, Clyde, dear.
+This seems to shut Clyde up. After a few minutes of eating, Frances clinks her spoon against her glass and stands.
+Frances: Well then, I believe a toast is in order. To my brother, noble warrior that he is. We're glad to have you home.
+Frances: And, of course, I'll be glad to pass the responsibility of running the estate and the company to you, dear, as Father always wanted it.
+Vincent looks suddenly uncomfortable. You recall that their father ran some sort of manufacturing company.
+Vincent: Yes, well, about that...
+Vincent: As a matter of fact, I've decided to sell the company and the estate.
+<<GetClue "The Soldier planned to sell his father's company and estate.">>
+There is silence for a beat.
+Frances: Oh. I see.
+Frances: Well, I suppose I can't complain. I didn't want to stay here forever, either. But what do you plan to do then, Vincent?
+Vincent: Travel. See the country.
+Miriam: Not to poke my nose into family affairs, but what about...
+	-> Your father?
+		Miriam: ... what about your father? Didn't he want you to take over the company?
+		Vincent: I don't see how that's any of your concern.
+		As Vincent says this, his sister nods.
+		Frances: He did. He told me before he died that he wanted Vincent to take over the company when he returned. But frankly, I think it's Vincent's choice.
+		From the end of the table the butler speaks up with furrowed brows.
+		Bailey: I don't recall that, ma'am. When did he say it?
+		Frances: It must have been while you were out of the room, Mr. Bailey.
+		Mr. Bailey nods, but his frown stays.
+		<<GetClue "The Hostess says her father wanted the Soldier to take over his company and estate, but the Butler doesn't remember him saying that.">>
+		<<set $victim to "Hostess">>
+	-> Your sister?
+		Miriam: ... what about your sister? Where shall she live if you sell the estate?
+		Vincent: Don't worry over Frances. I'll make sure she's provided for at least until she marries. I imagine the valuables alone should be enough for that.
+		<<GetClue "The Soldier says the manor's valuables should be worth enough to support the Hostess.">>
+		Frances: Not to worry, Miriam, darling. I'd wanted to leave for some time now anyway.
+		You notice her and Alma exchange a quick glance.
+	-> The staff?
+		Miriam: ... what about the staff of the estate? Shall they all be fired?
+		Vincent: I suppose so. Why shouldn't they be? They'll have no estate to care for.
+		Alma speaks up for the first time in the conversation, her voice louder than you've heard her before but still the quietest in the room.
+		Alma: But you will at least give them notice, won't you? Or severence pay?
+		Vincent: I don't see why I ought to. Under normal circumstances I would have sold the place soon after Father died, so my absence was already an extension of their positions.
+		<<GetClue "The Soldier planned to fire the estate's staff without severence pay.">>
+		<<set $victim to "Soldier">>
+		Alma frowns but stays silent, exchaning a worried glance with Frances. You look over to Mr. Bailey the butler, but he looks impassive.
+The rest of the dinner passes uneventfully. When everyone has had their fill and the dishes have been cleared away, Frances speaks up once again.
+Frances: Well now, I hope everyone enjoyed dinner.
+Polite affirmative mutterings ripple down the table.
+Frances: Wonderful! Then let me show you all to your rooms. Tomorrow, if everyone's amenable, we can go hunting in the woods behind the house.
+Frances: Just like the old days, eh?
+You are shown to your room-- it's beautiful, like the rest of the house-- and sleep fitfully under a mounted moose head.
+<<SwitchScene 1>>
+<<jump BeforeHunt>>
+===
+
+title: BeforeHunt
+---
+The next morning, you all gather in the parlor in preparation for the hunt. Clyde turns to you and Alma with a smarmy grin.
+Clyde: Do you ladies know how to shoot? I'd be happy to show you.
+	-> I know how
+		Miriam: Frances and I used to go hunting all the time. I know my way around a rifle.
+		Alma: I'm afraid I don't.
+	-> I don't know how
+		Miriam: Frances was always the crack shot out of the two of us. I suppose I could use some brushing up.
+		Alma: I could use some help too.
+Clyde: I'll show you, then. You'll soon be as good a shot as Frances.
+<<GetClue "The Hostess is a crack shot.">>
+//If neither the hostess nor the soldier is the victim, golfer becomes victim
+<<if $victim == "Golfer">>
+Frances: Hold on a moment. Does anyone know what happened to the brooch I had set on the back table?
+Frances: I took it off last night because it was too heavy, but now I don't know where it's gone.
+Everyone shakes their head. The room is searched, but to no avail.
+Frances: How strange. I'm sure I left it in here.
+Clyde: Perhaps one of the staff pilfered it?
+Bailey: No, sir. I have confidence in the entire staff. It must have merely been misplaced.
+Clyde: Oh? You're awfully confident, aren't you?
+Mr. Bailey's face turns a furious red.
+Bailey: What are you insinuating, sir?
+Frances: That's enough, Clyde. I have complete confidence in Mr. Bailey. I'm sure the brooch will turn up.
+Frances: Let's just forget about it and head out.
+<<GetClue "The Hostess's brooch disappeared. The Gofler accused the Butler of stealing it.">>
+<<else>>
+Frances: Come along, everyone, let's head out.
+<<endif>>
+<<SwitchScene 3>>
+<<jump Hunt>>
+===
+
+title: Hunt
+---
+It's a sunny day and although you don't catch anything yourself, simply walking through the woods is pleasant, albeit peppered with gunshots.
+For the most part you stay close together, but you eventually find yourself wandering further away from the group, trying to escape their mild bickering.
+<<ChangeMusic "Game Manager" 2>>
+After an hour or so though, a piercing shriek echoes through the woods. You hurry back to the group, only to find...
+<<if $victim is "Hostess">>
+Frances, <color=red>the Hostess</color>, lies on the forest floor, blood seeping through her vest. Her brother Vincent, <color=red>the Soldier</color>, and Alma, <color=red>the Singer</color>, are kneeled by her side, hands stained with blood in their attempts to stop the bleeding.
+It's no use, though. It's clear <color=red>the Hostess</color> is already dead. A ways away, Clyde, <color=red>the Golfer</color>, is leaning heavily on a tree, trying to look away.
+<<elseif $victim is "Soldier">>
+Vincent, <color=red>the Soldier</color>, lies on the forest floor, blood seeping through his military coat. His sister Frances, <color=red>the Hostess</color> is kneeled by his side, hands stained with blood in an attempt to stop the bleeding.
+It's no use, though. It's clear <color=red>the Soldier</color> is already dead. Alma, <color=red>the Singer</color>, is standing next to <color=red>the Hostess</color>, trying to console her. A ways away, Clyde, <color=red>the Golfer</color>, is leaning heavily on a tree, trying to look away.
+<<elseif $victim is "Golfer">>
+Clyde, <color=red>the Golfer</color>, lies on the forest floor, blood seeping through his cardigan. Vincent, <color=red>the Soldier</color>, is kneeled by his side, hands stained with blood in an attempt to stop the bleeding.
+It's no use, though. It's clear <color=red>the Golfer</color> is already dead. Alma, <color=red>the Singer</color>, is standing near the body with a horrified expression. Frances, <color=red>the Hostess</color>, is by her side looking similarly distressed.
+<<endif>>
+You take charge.
+<<if $victim != "Soldier">>
+You tell the Soldier to stay with the body.
+<<endif>>
+The others are instructed to run to the house and get help. As they hurry off, you pull a notebook out of your pocket. You have some investigating to do.
+<color=blue>Use X to access your notes on the case. When you believe you've solved the mystery, click the Solve button to choose the culprit.</color>
+<<SwitchScene 4>>
+<<ChangeMusic "Game Manager" 3>>
+<<wait .1>>
+<<Murder "Game Manager" {$victim}>>
+<<Unpause>>
+===
+
+title: Hostess
+---
+<<if !$talkedToHostess>>
+	<<if $victim is "Golfer">>
+	The Hostess and the Singer are huddled in the parlor, hand in hand.
+	The Singer: It's awful... Just awful. I just can't imagine how this happened.
+	The Hostess: I know, darling. It's a shock for all of us.
+	<<elseif $victim is "Soldier">>
+	The Hostess and the Singer are huddled in the parlor, hand in hand. The Hostess is drying her tears with a handkerchief.
+	The Hostess: Dear God. I just don't understand... I don't understand.
+	The Singer: I know, dear. No one could have expected this.
+	<<endif>>
+	They look up as you approach.
+	The Hostess: Oh, Miriam. I've had Mr. Bailey telephone for the police and an ambulance, but it will be some time before they arrive. We're rather far out from the city.
+	<<set $talkedToHostess to true>>
+<<endif>>
+The Hostess: Can I help you?
+The Detective: I'd like to ask you about what happened.
+The Hostess: Oh. Well, sure. Go ahead.
+	-> What were you doing at the time of the murder?
+		The Hostess: Murder? My God, you don't think this was intentional? Hunting accidents do happen, you know.
+		The Detective: The bullet went straight through his heart. It could have been an accident, but I think it's unlikely.
+		She pales and squeezes the Singer's hand tighter.
+		The Hostess: My God... Well, to answer your question, I don't really know specifically. I don't know which gunshot killed him, so the most I can say is that I was in the woods with everyone else.
+	-> How was your relationship with the victim?
+		<<if $victim is "Golfer">>
+		The Detective: How was your relationship with him?
+		The Hostess: Really, we haven't been close for some time. When we were younger we were rather an item, but that hasn't been the case in years.
+		The Hostess: If I'm being totally honest, I hadn't intended to invite him. It's just that I ran into him in the city recently and mentioned we were having a little get together and, well, I though it couldn't hurt.
+		She stares past you, harrowed.
+		<<GetClue "The Hostess and the Golfer used to date. The Hostess did not initially want to invite him here.">>
+			-> Why did you break up?
+				The Detective: Why did you stop seeing him?
+				Her face flickers with a brief sardonic smile.
+				The Hostess: I don't care to speak ill of the dead, but... did you meet Clyde? I should think it was obvious.
+			-> I found your brooch <<if $seenCorpse>>
+				The Detective: I found your brooch in Clyde's pocket.
+				The Hostess: Oh.
+				Something seems to dawn on her.
+				The Hostess: Oh. I'd heard he was in debt... Oh, dear Clyde. You could have just asked me...
+				<<GetClue "The Golfer stole the Hostess's brooch, likely because he was in debt.">>
+			-> That's all
+		<<elseif $victim is "Soldier">>
+		The Detective: How was your relationship with your brother?
+		The Hostess: Fine, I suppose? He sent letters back from the war of course, but other than that I hadn't seen him since he left.
+		She looks down at her hands.
+		The Hostess: If I'm being totally honest, I don't think he really approved of... some of my choices.
+			-> What choices?
+				The Detective: What choices?
+				The Hostess: I think he'd expected me to be married by now. You know how it is.
+			-> Did that have to do with the Singer? <<if $talkedToSinger>>
+				The Detective: Did those choices have anything to do with Alma?
+				Both women look up sharply.
+				The Hostess: I don't know what you're insinuating.
+				The Detective: Nothing at all. Just that you two seem to grow violets in your garden.
+				The two women exchange some sort of silent communication.
+				The Hostess: I'll only say that my brother didn't care for lavender. That's all. I trust that you won't breathe a word of this?
+				The Detective: Of course.
+				<<GetClue "The Hostess and the Singer are lovers. The Soldier suspected this and disapproved.">>
+		<<endif>>
+	-> Nevermind
+<<Unpause>>
+===
+
+title: Soldier
+---
+<<if !$talkedToSoldier>>
+The Soldier stands at the edge of the clearing, dutifully keeping watch over the body.
+The Soldier: Yes?
+The Detective: I'm just looking around. Investigating.
+The Soldier gives you a skeptical look.
+The Detective: Can I ask you some questions?
+The Soldier: I suppose.
+<<set $talkedToSoldier to true>>
+<<endif>>
+The Soldier: Ask away.
+	-> How was your relationship with the victim?
+		<<if $victim is "Golfer">>
+		The Detective: How well did you know Clyde?
+		The Soldier: Not very. We got on fine I suppose.
+		<<elseif $victim is "Hostess">>
+		The Detective: Were you close with your sister?
+		The Soldier: Close enough. I wrote her every week while I was away.
+		<<endif>>
+	-> How did the hunt go?
+		The Detective: Did the hunt go well for you?
+		The Soldier looks away.
+		The Soldier: As well as I expected. Frances was always the better shot of the two of us.
+		The Soldier: I think our father was rather nonplussed. He loved hunting, but his son couldn't hit a target if it was a foot away.
+		<<GetClue "The Soldier is a terrible shot.">>
+		-> Weren't you in the war?
+			The Detective: I mean no offense, but weren't you in the war?
+			The Soldier: As a medic. I did get arms training, but it wasn't my top priority.
+			The Detective: I see.
+			<<GetClue "The Soldier was a medic.">>
+		-> I see
+	-> Nevermind
+<<Unpause>>
+===
+
+title: Singer
+---
+<<if !$talkedToSinger>>
+	<<if $victim is "Hostess">>
+	The Singer stands alone in the parlor, apparently unsure what to do with herself. She wipes away her tears as you approach.
+	The Singer: I asked Mr. Bailey to call the police. I don't know how soon they'll be able to get here, though. We're rather far out.
+	<<else>>
+	The Singer and the Hostess are huddled together, hand in hand.
+	<<endif>>
+	The Detective: I'd like to ask you some questions, if I may?
+<<set $talkedToSinger to true>>
+<<endif>>
+The Singer: What would you like to know?
+	-> How was your relationship with the victim?
+		<<if $victim is "Golfer">>
+		The Detective: Did you know Clyde well?
+		The Singer: Not at all. We'd never met before last night.
+		<<elseif $victim is "Hostess">>
+		The Detective: What was your relationship with Frances like?
+		The Singer: She was a very close friend. We met at a speakeasy in New York and hit it off. This was the first time I'd met any of her family, though.
+		The Singer: I don't think her brother really likes me, but I had expected that. Really, I hadn't even wanted to come here, but she was just so excited about her brother's return...
+		<<GetClue "The Soldier doesn't like the Singer.">>
+			-> I found a locket in the Hostess's pocket <<if $seenCorpse>>
+				The Detective: I found a locket with your picture in it in Frances's pocket. I hadn't realized you two were so close.
+				The Singer looks even more anxious.
+				The Singer: Yes. We were very close friends.
+				You don't want to press the poor woman further, but you believe you've picked up on the nature of their relationship.
+				<<GetClue "The Hostess and the Singer were lovers.">>
+		<<elseif $victim is "Soldier">>
+		The Detective: How well did you know Vincent?
+		The Singer: Not well at all. I met him for the first time yesterday. I don't think he really cared for me being here, but I had expected that.
+		<<GetClue "The Soldier didn't like the Singer.">>
+		<<endif>>
+	-> How did the hunt go?
+		The Detective: You said you didn't know how to shoot, right? Did you end up catching anything?
+		The Singer: No. Honestly, I got worried just carrying the gun, so I left it in the house.
+		<<GetClue "The Singer left her gun in the house.">>
+	-> Nevermind
+<<Unpause>>
+===
+
+title: Golfer
+---
+<<if !$talkedToGolfer>>
+The Golfer is leaning heavily on his club, peering into a cabinet holding fine china.
+The Golfer: How are you, old chap? Holding up alright?
+The Detective: Well enough. I'd like to ask you some questions.
+<<set $talkedToGolfer to true>>
+<<endif>>
+The Golfer: Shoot.
+	-> How was your relationship with the victim?
+		<<if $victim is "Hostess">>
+		The Detective: How was your relationship with Frances?
+		The Golfer: Good. We were together for a time in our youths, if you'd believe it. The old girl could be rather... tactless, shall we say. Never hid a thought in her life.
+		<<GetClue "The Golfer and the Hostess used to date.">>
+		<<elseif $victim is "Soldier">>
+		The Detective: How was your relationship with Vincent?
+		The Golfer: Good enough. We used to be pals back in the day, but we lost touch years ago, even before he went to war.
+		<<endif>>
+	-> Nevermind
+<<Unpause>>
+===
+
+title: Butler
+---
+<<if !$talkedToButler>>
+The Butler is absently polishing a spoon, apparently distracted. He looks up as you approach.
+The Butler: Can I help you, Miss?
+The Detective: May I ask you some questions?
+<<set $talkedToButler to true>>
+<<endif>>
+The Butler: Whatever I can help you with, I am at your service.
+	-> What were you doing during the hunt?
+		The Detective: What were you doing while we were out hunting?
+		The Butler: I was here, polishing the silver. I don't see how that's relevant-- I wasn't even at the scene of the crime, and all the guns were gone from the house.
+		<<GetClue "The Butler claims all the guns were gone from the house during the hunt.">>
+	-> How was your relationship with the victim?
+		<<if $victim is "Golfer">>
+		The Detective: How well did you know Clyde?
+		The Butler: Not well. I met him many years ago, but I don't believe he remembered me. Regardless, we never spoke much.
+		The Detective: He was quite rude to you at dinner. Didn't that bother you?
+		The Butler: No. Such treatment is typical of servants. Mr. Clark never tolerated such treatment towards me, and Ms. Clark does not either.
+		<<elseif $victim is "Hostess">>
+		The Detective: How well did you know Frances?
+		The Butler: I knew her all her life. Her father, Mr. Clark, was a friend of mine. He gave me this job when my family was struggling...
+		The Butler: I remember the day Ms. Clark was born.
+		The Detective: But did you get along?
+		The Butler: She was always kind to me. She allowed me to forego my duties when her father took ill so that I could stay by his side. Which is why I don't understand...
+		He trails off.
+		The Detective: Understand what?
+		The Butler: Nothing. Simply something Ms. Clark mentioned at dinner.
+		//This part might be too vague
+		<<elseif $victim is "Soldier">>
+		The Detective: How well did you know Vincent?
+		The Butler: I knew him all his life. Her father, Mr. Clark, was a friend of mine. He gave me this job when my family was struggling...
+		The Butler: I remember the daythe young Mr. Clark was born.
+		The Detective: But did you get along?
+		The Butler: I believed so. I can't imagine why he would do such a thing as lay off all the staff.
+		<<GetClue "The Butler resented the Soldier's plan to lay off all the staff.">>
+		<<endif>>
+	-> Were you angry that the Golfer accused you of theft? <<if $victim is "Golfer">>
+		The Detective: Were you angry at Clyde for accusing you of theft?
+		The Butler: It was certainly an outrage. In all my years of service to the Clarks I have never been accused of such a thing.
+			-> I found the brooch in the Golfer's pocket <<if $seenCorpse>>
+				The Detective: I found the stolen brooch in Clyde's pocket.
+				The Butler: Hm. Merely covering for himself, then. Such a scoundrel. Well, I am glad to have my name cleared, although the circumstances are terrible.
+			-> That's all
+	-> Neverminds
+<<Unpause>>
+===
+
+title: Corpse
+---
+A bullet has torn straight through the {$victim}'s heart.
+<<if $victim is "Hostess">>
+In her pocket is a locket. You open it up and find a small photograph of the Singer inside.
+<<elseif $victim is "Golfer">>
+In his pocket is a large brooch. It must be the Hostess's.
+<<endif>>
+<<declare $seenCorpse = true>>
+<<Unpause>>
+===
+
+title: Fail
+---
+That doesn't seem right. Look through your evidence using X and try again.
+<<Unpause>>
+===
+
+title: Solve
+---
+<<SwitchScene 3>>
+Before the police even arrive you've sussed out the culprit and gather everyone together to expose the Butler.
+<<if $victim is "Hostess">>
+As it turns out, when the Butler heard the Hostess mention her father's wish for the Soldier to inherit the estate, he began to suspect the Hostess of murdering Mr. Clark in the short time the Butler was not by his side.
+In revenge for his dear friend's death, the Butler took the gun the Singer had left behind and snuck out behind the hunting party. As a good friend of Mr. Clark, who was an avid hunter, the Butler had ample knowledge of how to use the gun.
+Whether the Hostess killed her father nor not, you'll now never know. When the police arrive, they quickly arrest the Butler.
+Congratulations, Detective!
+<<elseif $victim is "Soldier">>
+The Butler, outraged that the Soldier would be so cruel as to dismiss all the staff without pay, and knowing that the Hostess would not do the same were she the heir, decided to kill the Soldier.
+He took the gun the Singer had left behind and snuck out behind the hunting party. As a good friend of Mr. Clark, who was an avid hunter, the Butler had ample knowledge of how to use the gun.
+When the police arrive, they quickly arrest the Butler.
+Congratulations, Detective!
+<<elseif $victim is "Golfer">>
+The Butler, outraged that his good name was tarnished by the Golfer's accusation and suspecting that the Golfer was the true culprit, killed him so that the real thief might be revealed.
+He took the gun the Singer had left behind and snuck out behind the hunting party. As a good friend of Mr. Clark, who was an avid hunter, the Butler had ample knowledge of how to use the gun.
+When the police arrive, they quickly arrest the Butler.
+Congratulations, Detective!
+<<endif>>
+===
