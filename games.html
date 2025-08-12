@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Games</title>
+</head>
+<body>
+
+    <div id="container">
+        <div id="headerArea">
+
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="levels.html">Level Design</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+
+            <main>
+                <h1>Games</h1>
+
+                <center>
+                    <h1><a href="https://sallyjuettner.itch.io/the-clark-caper">The Clark Caper</a></h1>
+                    <img src="clarkCaperLogo.png" alt="In a white cursive font reads 'The Cark Caper.' Below it is an oval showing a deer's head mounted on a wall with ornate red wallpaper. The art in the oval is rendered in pixel art. Above and below the text and oval are gold bands crossing the image horizontally. The background is black.'" width="500" height="310">
+                    <p>Made over the course of four weeks, The Clark Caper is a short murder mystery game set in the 1920s in which the choices the player makes determine who the victim will be.</p>
+
+                    <h1><a href="https://sallyjuettner.itch.io/crustfallen">Crustfallen</a></h1>
+                    <img src="crustfallen.png" alt="A video game level with a blue blackground and green platforms. An entirely white prototype player character is falling from the center of the screen. There is a stretched jpeg of a firewall to the right and a low resolution cartoon hamster to the left." width="473" height="152">
+                    <p>Made for Crust Jam 2024, Crustfallen is a combat-focused platformer that pays tribute to early internet-era website design.</p>
+
+                    <h1><a href="https://sallyjuettner.itch.io/the-1904-olympic-marathon">The 1904 Olympic Marathon</a></h1>
+                    <img src="1904OlympicMarathon.png" alt="A picture of a bitsy game with pixel art in green, yellow, and white. It shows a race track, stadium seats, and people gathered around the track. Some of them are lined up near the starting line." width="440" height="438">
+                    <p>The 1904 Olympic Marathon is a lighthearted simulation of the historical race of the same name. You play as Thomas Hicks as he goes through what has been called the most poorly planned marathon in history.</p>
+
+                    <h1><a href="https://sallyjuettner.itch.io/artifice">Artifice</a></h1>
+                    <img src="artifice.png" alt="Two lines of text on a dark blue background. The top line is in white and reads 'You're never going to die.' The bottom line is in blue and reads 'I'm never going to die." width="473" height="152">
+                    <p>Artifice is a Twine game made in the space of one week. You play as an artificer named Dr. Ingrid Peren as she navigates a world approaching ruin due to a calamitous thundestorm.</p>
+
+                </center>
+            </main>
+
+        </div>
+        <!--<footer id="footer">CC0 Public Domain, 2022</footer>-->
+    </div>
+    <!-- THIS IS THE CSS !-->
+    <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree
+        but I wanted to include an example of how to include a custom font.
+        If you download a font file you can upload it onto your Neocities
+        and then link it! Many fonts have separate files for each style
+        (bold, italic, etc. T_T) which is why there are so many!
+
+        */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #236167;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: #fceaff;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+        to uncomment a line of CSS, remove the * and the /
+        before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+        the other elements, you will need to move that div outside
+        of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+          and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+                /* the area below is for all links on your page
+        EXCEPT for the navigation */
+                #container a {
+                    color: #fceaff;
+                    font-weight: bold;
+                    /* if you want to remove the underline
+          you can add a line below here that says:
+          text-decoration:none; */
+                }
+
+            #header {
+                width: 100%;
+                background-color: #2A4D6E;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header,
+          you can add them directly to the <div id="header"></div> element! */
+                /*background-image: var(--header-image);*/
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #133453;
+                /* navbar color */
+                width: 100%;
+            }
+
+                #navbar ul {
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    justify-content: space-evenly;
+                }
+
+                #navbar li {
+                    padding-top: 10px;
+                }
+
+                    /* navigation links*/
+                    #navbar li a {
+                        color: #fceaff;
+                        /* navbar text color */
+                        font-weight: 800;
+                        text-decoration: none;
+                        /* this removes the underline */
+                    }
+
+                        /* navigation link when a link is hovered over */
+                        #navbar li a:hover {
+                            color: #a49cba;
+                            text-decoration: underline;
+                        }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+        if you want to style them separately,
+        create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #241445;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+        between the sidebars! */
+            main {
+                background-color: #2A4D6E;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+        allow me to explain!
+        if you're using both sidebars, the "order" value
+        tells the CSS the order in which to display them.
+        left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #133453;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #fceaff;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #fceaff;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #13092D;
+                border: 1px solid #ED64F5;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page?
+        by default, the container width is 900px.
+        in order to keep things responsive, take your new height,
+        and then subtrack it by 100. use this new number as the
+        "max-width" value below
+        */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+          since the sidebars would be too small on a mobile device.
+          feel free to play around with the order!
+          */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+    </style>
+
+
+</body>
+</html>
