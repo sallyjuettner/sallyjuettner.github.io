@@ -40,12 +40,12 @@
                 <br><br>
 
                 <h1>Backstory</h1>
-                <object data="scripts/TimbreLoreDoc.pdf" type="application/pdf" width="100%" height="33%"></object>
+                <object data="scripts/TimbreLoreDoc.pdf" type="application/pdf" width="100%" height="500px"></object>
                 <p><a href="scripts/TimbreLoreDoc.pdf">Download here</a></p>
                 <br><br>
 
                 <h1>Dialogue</h1>
-                <object data="scripts/TimbreVAScript.pdf" type="application/pdf" width="100%" height="33%"></object>
+                <object data="scripts/TimbreVAScript.pdf" type="application/pdf" width="100%" height="500px"></object>
                 <p><a href="scripts/TimbreLoreDoc.pdf">Download here</a></p>
                 <br><br>
 
@@ -210,12 +210,13 @@
 
             /* this is the color of the main content area,
         between the sidebars! */
-            main {
-                background-color: #2A4D6E;
-                flex: 1;
-                padding: 20px;
-                order: 2;
-            }
+        main {
+            background-color: #2A4D6E;
+            flex: 1;
+            padding: 20px;
+            order: 2;
+            height: 100%; /*This line must be here for PDFs to not break the background -Sally*/
+        }
 
             /* what's this "order" stuff about??
         allow me to explain!
